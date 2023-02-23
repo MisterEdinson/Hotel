@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.hotel.ui.screens.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.hotel.ui.screens.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.hotel.ui.screens.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.hotel.ui.screens.contacts.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/reservationsFragment"
+        android:name="com.example.hotel.ui.screens.reservation.ReservationsFragment"
+        android:label="fragment_reservations"
+        tools:layout="@layout/fragment_reservations" />
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.example.hotel.ui.screens.reviews.ReviewsFragment"
+        android:label="fragment_reviews"
+        tools:layout="@layout/fragment_reviews" />
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.example.hotel.ui.screens.sales.SalesFragment"
+        android:label="fragment_sales"
+        tools:layout="@layout/fragment_sales" />
 </navigation>
