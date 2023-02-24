@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgReviews"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_user" />
+
+    <TextView
+        android:id="@+id/tvTitleReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        android:text="Николай Федун"
+        app:layout_constraintStart_toEndOf="@+id/imgReviews"
+        app:layout_constraintTop_toTopOf="@+id/imgReviews" />
+
+    <TextView
+        android:id="@+id/tvCityReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="12sp"
+        android:text="г.Новосибирск"
+        app:layout_constraintBottom_toBottomOf="@+id/imgReviews"
+        app:layout_constraintStart_toEndOf="@+id/imgReviews" />
+
+    <TextView
+        android:id="@+id/tvDescReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="italic"
+        tools:text="Я отдыхала в этом отеле вместе с 5-летним сыном с 12.07-24.04.2020.что я могу сказать!!!
+Такого хозяина, который горит своим делом,вы вряд ли где-то встретите!Именно он сделает все,чтобы вам надолго запомнился и понравился ваш отдых! Место хорошее,сам отель семейный,чистый,достаточно тихий.Если вы едете с ребёнком,то ему скучно не будет,во дворе очень много детского инвенторя:горка,велосипеды,батут,игрушки,ну и конечно бассейн!!!Вблизи самого отеля есть столовые и разные кафешки-голодными точно не останетесь!До моря идти удобно и недолго,минут 10 спокойным шагом.Номера хорошие,чистые и светлые.В общем все все замечательно,не Европа конечно,но очень достойно для отдыха в частном секторе.И опять же,возвращаясь к хозяину этого места,Который всегда поможет и подскажет,как сделать так,чтобы вы остались довольны,спасибо огромное за наш отдых и до июля,мы обязательно будем!!!!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCityReviews" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

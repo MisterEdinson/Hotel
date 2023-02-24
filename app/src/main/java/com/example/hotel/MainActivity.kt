@@ -34,7 +34,10 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar?.title = "Наш отель:"
             }else if(destination.id == R.id.detailsFragment){
                 supportActionBar?.title = "Номер:"
-//                supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.purple_700)))
+            }else if(destination.id == R.id.galleryFragment){
+                supportActionBar?.title = "Галерея:"
+            }else if(destination.id == R.id.reviewsFragment){
+                supportActionBar?.title = "Отзывы клиентов:"
             }
         }
     }

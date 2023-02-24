@@ -1,4 +1,4 @@
-package com.example.hotel.domain.model.home
+package com.example.hotel.domain.model.detailsModel
 
 import com.google.gson.annotations.SerializedName
 

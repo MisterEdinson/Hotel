@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.hotel.R
-import com.example.hotel.domain.model.home.ResponseItem
+import com.example.hotel.domain.model.detailsModel.ResponseItem
 import com.example.hotel.domain.repository.Repository
 import kotlinx.android.synthetic.main.fragment_home.*
 

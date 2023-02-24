@@ -8,7 +8,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.hotel.R
-import com.example.hotel.domain.model.home.ResponseItem
+import com.example.hotel.domain.model.detailsModel.ResponseItem
 import com.example.hotel.utils.Constans.Companion.BASE_IMG
 import kotlinx.android.synthetic.main.item_number.view.*
 

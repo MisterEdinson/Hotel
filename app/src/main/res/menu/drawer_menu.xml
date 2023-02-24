@@ -8,16 +8,16 @@
             android:title="Отель" />
         <item
             android:id="@id/galleryFragment"
-            android:title="Галлерея" />
-        <item
-            android:id="@id/reservationsFragment"
-            android:title="Резервирование" />
+            android:title="Галерея" />
+<!--        <item-->
+<!--            android:id="@id/reservationsFragment"-->
+<!--            android:title="Резервирование" />-->
         <item
             android:id="@id/reviewsFragment"
             android:title="Отзывы" />
-        <item
-            android:id="@id/salesFragment"
-            android:title="Акции" />
+<!--        <item-->
+<!--            android:id="@id/salesFragment"-->
+<!--            android:title="Акции" />-->
         <item
             android:id="@id/contactsFragment"
             android:title="Контакты" />
