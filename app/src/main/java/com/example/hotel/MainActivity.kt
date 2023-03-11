@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar?.title = "Галерея:"
             }else if(destination.id == R.id.reviewsFragment){
                 supportActionBar?.title = "Отзывы клиентов:"
+            }else if(destination.id == R.id.contactsFragment){
+                supportActionBar?.title = "Наши контакты:"
             }
         }
     }

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.hotel.R
 import com.example.hotel.domain.model.detailsModel.ResponseItem
 import com.example.hotel.domain.repository.Repository
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {

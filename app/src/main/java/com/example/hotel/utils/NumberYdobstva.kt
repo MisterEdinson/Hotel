@@ -7,9 +7,9 @@ class NumberYdobstva {
          val ARRAY_YDOBSTV = arrayOf(
              R.drawable.ic_tv,
              R.drawable.ic_wifi,
-             R.drawable.ic_car,
-             R.drawable.ic_service,
-             R.drawable.ic_transfer
+             R.drawable.fridge,
+             R.drawable.ic_bed_double,
+             R.drawable.shower
          )
     }
 }

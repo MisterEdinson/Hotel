@@ -12,13 +12,25 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.hotel.ui.screens.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_in_left" />
+    </fragment>
     <fragment
         android:id="@+id/galleryFragment"
         android:name="com.example.hotel.ui.screens.gallery.GalleryFragment"
@@ -44,4 +56,9 @@
         android:name="com.example.hotel.ui.screens.sales.SalesFragment"
         android:label="fragment_sales"
         tools:layout="@layout/fragment_sales" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.hotel.ui.screens.splash.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
 </navigation>

@@ -1,5 +1,6 @@
 package com.example.hotel.ui.screens.home
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,8 +32,13 @@ class HomeAdapterNumber : RecyclerView.Adapter<HomeAdapterNumber.AdapterNumber>(
             tvDescription.text = article.mDesc
             tvPrice.text = article.price
 
+
             val textId = article.id?.toInt()
             val bundle = Bundle()
+            itemHome.setOnClickListener { bund ->
+                textId?.let { bund -> bundle.putInt("id", bund) }
+                findNavController().navigate(R.id.detailsFragment, bundle)
+            }
             btnDetails.setOnClickListener { bund ->
                 textId?.let { bund -> bundle.putInt("id", bund) }
                 findNavController().navigate(R.id.detailsFragment, bundle)

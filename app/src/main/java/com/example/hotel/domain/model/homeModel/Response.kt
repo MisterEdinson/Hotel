@@ -6,7 +6,7 @@ data class Response(
 	@field:SerializedName("gen_img")
 	val genImg: String? = null,
 	@field:SerializedName("price_table")
-	val priceTable: String? = null,
+	val priceTable: List<String?>? = null,
 	val price: String? = null,
 	val name: String? = null,
 	val ydobstva: List<String?>? = null,
@@ -15,5 +15,5 @@ data class Response(
 	@field:SerializedName("b_desc")
 	val bDesc: String? = null,
 	val id: String? = null,
-	val gallery: String? = null
+	val gallery: List<String?>? = null
 )
