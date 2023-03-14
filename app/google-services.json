@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "52101439319",
+    "project_id": "fir-app-cc476",
+    "storage_bucket": "fir-app-cc476.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52101439319:android:b2eaa7219e2ee7c7c4a812",
+        "android_client_info": {
+          "package_name": "com.example.hotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52101439319-m0toqg984bm51ulpp8ieda7pq4tejjke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4oc4F-K6Hi9jwCH9aWoBeJoEIqrbQwbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52101439319-m0toqg984bm51ulpp8ieda7pq4tejjke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

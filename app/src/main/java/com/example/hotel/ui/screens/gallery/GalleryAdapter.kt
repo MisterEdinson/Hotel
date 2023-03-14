@@ -19,9 +19,7 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.AdapterImage>() {
     private var image:Fragment = Fragment(R.layout.item_gallery)
     private val imageView = image.view?.findViewById<ImageView>(R.id.imgBig)
 
-    class AdapterImage(view: View) : RecyclerView.ViewHolder(view){
-        //val imageViewBig:ImageView = findViewById(R.id.imgBig)
-    }
+    class AdapterImage(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterImage {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_gallery,parent,false)

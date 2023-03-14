@@ -3,7 +3,6 @@ package com.example.hotel.ui.screens.reviews
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hotel.R
 import com.example.hotel.domain.model.reviewsModel.ResponseReviewsItem

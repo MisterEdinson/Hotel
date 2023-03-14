@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.hotel.R
 import com.example.hotel.domain.model.detailsModel.ResponseItem
 import com.example.hotel.domain.repository.Repository
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -25,7 +24,6 @@ class HomeFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
@@ -38,7 +36,6 @@ class HomeFragment : Fragment() {
             progressBar.visibility = View.INVISIBLE
         })
     }
-
     private fun initAdapter() {
         homeAdapter = HomeAdapterNumber()
         rvHome.apply {

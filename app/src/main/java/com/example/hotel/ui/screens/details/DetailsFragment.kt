@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -31,14 +30,12 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
-
         val id = arguments?.getInt("id") ?: 7777777
         val repository = Repository()
         val viewModelFactory = DetailsViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(DetailsViewModel::class.java)
         viewModel.getNumbers(id - 1)
         viewModel.repo.observe(viewLifecycleOwner, Observer {
-//            Glide.with(this).load(Constans.BASE_IMG + it.genImg).into(imgDetailsLogo)
             detailsAdapter.setList(it.gallery as List<String>)
 
             tvDetailsTitle.text = it.name

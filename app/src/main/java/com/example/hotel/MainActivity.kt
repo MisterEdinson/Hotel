@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -27,20 +26,23 @@ class MainActivity : AppCompatActivity() {
         navigationView.setupWithNavController(navController)
         appBarConfiguration = AppBarConfiguration(navController.graph,drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
         listener = NavController.OnDestinationChangedListener { controller,destination, arguments ->
-            if(destination.id == R.id.homeFragment){
-                //supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.purple_200)))
-                supportActionBar?.title = "Наш отель:"
-            }else if(destination.id == R.id.detailsFragment){
-                supportActionBar?.title = "Номер:"
-            }else if(destination.id == R.id.galleryFragment){
-                supportActionBar?.title = "Галерея:"
-            }else if(destination.id == R.id.reviewsFragment){
-                supportActionBar?.title = "Отзывы клиентов:"
-            }else if(destination.id == R.id.contactsFragment){
-                supportActionBar?.title = "Наши контакты:"
-            }
+
+                //supportActionBar?.show()
+                if(destination.id == R.id.homeFragment){
+                    //supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.purple_200)))
+                    supportActionBar?.title = "Наш отель:"
+                }else if(destination.id == R.id.detailsFragment){
+                    supportActionBar?.title = "Номер:"
+                }else if(destination.id == R.id.galleryFragment){
+                    supportActionBar?.title = "Галерея:"
+                }else if(destination.id == R.id.reviewsFragment){
+                    supportActionBar?.title = "Отзывы клиентов:"
+                }else if(destination.id == R.id.contactsFragment){
+                    supportActionBar?.title = "Наши контакты:"
+                }
+
+
         }
     }
     override fun onResume() {

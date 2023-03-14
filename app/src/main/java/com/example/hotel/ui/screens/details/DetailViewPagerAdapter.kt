@@ -3,16 +3,12 @@ package com.example.hotel.ui.screens.details
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.hotel.R
-import com.example.hotel.utils.Constans
 import com.example.hotel.utils.Constans.Companion.BASE_URL
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_details.view.*
-import kotlinx.android.synthetic.main.item_gallery.view.*
 
 class DetailViewPagerAdapter : RecyclerView.Adapter<DetailViewPagerAdapter.ViewPagerAdapter>() {
     private var image:List<String> = emptyList()
