@@ -14,14 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hotel"
         tools:targetApi="31">
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDe3uHi1D8bNmM4_rs4TY_H4GSQ5WjQd9w" />
-
+        <activity
+            android:name=".ui.screens.gallery.GalleryActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ui.screens.splash.SplashActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -31,6 +37,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 

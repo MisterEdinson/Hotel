@@ -2,22 +2,18 @@ package com.example.hotel.ui.screens.gallery
 
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hotel.R
 import com.example.hotel.utils.Constans.Companion.BASE_URL
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_gallery.view.*
 import kotlinx.android.synthetic.main.item_gallery.view.*
 
-class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.AdapterImage>() {
+
+class GalleryAdapter(
+    val imageShow: (String) -> Unit
+) : RecyclerView.Adapter<GalleryAdapter.AdapterImage>() {
     private var listImage = emptyList<String>()
-    private var image:Fragment = Fragment(R.layout.item_gallery)
-    private val imageView = image.view?.findViewById<ImageView>(R.id.imgBig)
 
     class AdapterImage(view: View) : RecyclerView.ViewHolder(view)
 
@@ -37,11 +33,10 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.AdapterImage>() {
                 .into(imgGallery)
 
             imgGallery.setOnClickListener{
-                Toast.makeText(context,item,Toast.LENGTH_SHORT).show()
+                imageShow(item)
             }
         }
     }
-
     override fun getItemCount(): Int {
         return listImage.size
     }

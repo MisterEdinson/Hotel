@@ -61,4 +61,13 @@
         android:name="com.example.hotel.ui.screens.splash.SplashActivity"
         android:label="activity_splash"
         tools:layout="@layout/activity_splash" />
+    <activity
+        android:id="@+id/galleryActivity"
+        android:name="com.example.hotel.ui.screens.gallery.GalleryActivity"
+        android:label="activity_gallery"
+        tools:layout="@layout/activity_gallery" >
+        <argument
+            android:name="image"
+            app:argType="string" />
+    </activity>
 </navigation>
