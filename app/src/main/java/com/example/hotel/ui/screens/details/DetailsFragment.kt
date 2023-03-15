@@ -6,14 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hotel.R
 import com.example.hotel.domain.repository.Repository
 import com.example.hotel.utils.NumberYdobstva.Companion.ARRAY_YDOBSTV
+import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
 import kotlinx.android.synthetic.main.fragment_details.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class DetailsFragment : Fragment() {
@@ -56,12 +60,7 @@ class DetailsFragment : Fragment() {
             forePrice.text = it?.priceTable?.get(3) ?: "-"
         })
         btnReservation.setOnClickListener{
-            val datePicker =
-                MaterialDatePicker.Builder.datePicker()
-                    .setTitleText("Дата бронирования:")
-                    .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-                    .build()
-            datePicker.show(childFragmentManager,"show")
+            showDatePicker()
         }
     }
     private fun initAdapter() {
@@ -69,6 +68,50 @@ class DetailsFragment : Fragment() {
         imgDetailsLogo.apply {
             adapter = detailsAdapter
         }
+    }
+    private fun showDatePicker(){
+        val today = MaterialDatePicker.todayInUtcMilliseconds()
+        val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+//        Toast.makeText(context,dateConverted(today),Toast.LENGTH_SHORT).show()
+//        calendar.timeInMillis = today
+//        calendar[Calendar.MONTH] = Calendar.JANUARY
+//        val janThisYear = calendar.timeInMillis
+
+        calendar.timeInMillis = today
+        calendar[Calendar.DATE] = Calendar.DATE
+        val janThisYear = calendar.timeInMillis
+
+        calendar.timeInMillis = today
+        calendar[Calendar.MONTH] = Calendar.DECEMBER
+        val decThisYear = calendar.timeInMillis
+
+        // Build constraints.
+        val constraintsBuilder =
+            CalendarConstraints.Builder()
+                .setStart(today)
+                .setEnd(decThisYear)
+                .build()
+
+        val dateRangePicker = MaterialDatePicker.Builder
+                .dateRangePicker()
+                .setCalendarConstraints(constraintsBuilder)
+                .setTitleText("Дата бронирования:")
+                .build()
+        dateRangePicker.show(childFragmentManager,"show")
+
+        dateRangePicker.addOnPositiveButtonClickListener {
+            val startDate = it.first
+            val endDate = it.second
+            Toast.makeText(context,"Мы обрабатываем Вашу заявку",Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun dateConverted(time:Long):String{
+        val date = Date(time)
+        val format = SimpleDateFormat(
+            "dd-MM-yyyy",
+            Locale.getDefault()
+        )
+        return format.format(date)
     }
 }
 

@@ -19,6 +19,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDe3uHi1D8bNmM4_rs4TY_H4GSQ5WjQd9w" />
         <activity
+            android:label="Отель Мечта"
             android:name=".ui.screens.gallery.GalleryActivity"
             android:exported="true">
             <meta-data

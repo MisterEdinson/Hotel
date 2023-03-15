@@ -238,11 +238,14 @@
 
         <Button
             android:id="@+id/btnReservation"
-            android:layout_width="wrap_content"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
             android:text="Зарезервировать"
+            android:textColor="#4E4D4D"
+            android:backgroundTint="@color/btn_color"
+
             android:fontFamily="@font/neucha_regular"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
